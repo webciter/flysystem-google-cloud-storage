@@ -266,7 +266,7 @@ class GoogleStorageAdapter extends AbstractAdapter
                 $object['path'] = $this->normaliseDirName($object['path']);
             }
 
-            if (strpos($object['path'], $dirname) !== false) {
+            if (strpos($object['path'], $dirname) !== false AND $object['path'] !== $dirname) {
                 $filtered_objects[] = $object;
             }
         }
